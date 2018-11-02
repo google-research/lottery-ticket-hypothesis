@@ -1,5 +1,10 @@
 # The Lottery Ticket Hypothesis
 
+## Authors
+
+This codebase was developed by Jonathan Frankle and David Bieber at Google during
+the summer of 2018.
+
 ## Background
 
 This library reimplements and extends the work of Frankle and Carbin in
