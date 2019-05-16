@@ -29,13 +29,11 @@ DEPENDENCIES = [
 ]
 
 VERSION = '1'
-URL = 'https://github.com/brain-research/lottery-ticket'
 
 setup(
-    name='lottery-ticket',
+    name='lottery_ticket',
     version=VERSION,
     description=SHORT_DESCRIPTION,
-    url=URL,
 
     author='Jonathan Frankle',
     author_email='jfrankle@google.com',
@@ -65,7 +63,11 @@ setup(
 
     keywords='lottery ticket hypothesis',
 
-    packages=['lottery-ticket'],
+    packages=['lottery_ticket', 'lottery_ticket.foundations', 'lottery_ticket.datasets', 'lottery_ticket.mnist_fc'],
+    package_dir={'lottery_ticket': '.',
+                 'lottery_ticket.foundations': './foundations',
+                 'lottery_ticket.datasets': './datasets',
+                 'lottery_ticket.mnist_fc': './mnist_fc'},
 
     install_requires=DEPENDENCIES,
 )

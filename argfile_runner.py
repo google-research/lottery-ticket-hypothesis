@@ -24,7 +24,7 @@ import fire
 
 def run(runner, argfile):
   flags = subprocess.check_output(['python', argfile])
-  for flag in flags.split('\n'):
+  for flag in flags.decode('utf-8').split('\n'):
     subprocess.call(['python', runner, flag])
 
 
@@ -32,4 +32,4 @@ def main(unused_argv):
   fire.Fire(run)
 
 if __name__ == '__main__':
-  main()
+  main(0)
